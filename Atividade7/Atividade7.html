@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Joguinho</title>
+
+    <script>
+
+        var jogador = parseFloat(prompt("Digite a sua escolha: \n1- Pedra\n2- Papel\n3- Tesoura"));
+        while(jogador < 1 || jogador > 3) {
+            var jogador = parseFloat(prompt("Digite a sua escolha: \n1- Pedra\n2- Papel\n3- Tesoura"));
+        }
+        
+        var computador = Math.floor((3 * Math.random()) + 1);
+
+        escolhaJog = Escolha(jogador);
+        escolhaComp = Escolha(computador);
+
+        if(jogador == computador) {
+            alert("Jogador: " + escolhaJog + "\nComputador: " + escolhaComp + "\n\nEmpatou!");
+        }
+        else if(jogador == 1) {
+            if(computador == 2) {
+                alert("Jogador: " + escolhaJog + "\nComputador: " + escolhaComp + "\n\nComputador venceu!");
+            }
+            else {
+                alert("Jogador: " + escolhaJog + "\nComputador: " + escolhaComp + "\n\nJogador venceu!");
+            }
+        }
+        else if(jogador == 2) {
+            if(computador == 1) {
+                alert("Jogador: " + escolhaJog + "\nComputador: " + escolhaComp + "\n\nJogador venceu!");
+            }
+            else {
+                alert("Jogador: " + escolhaJog + "\nComputador: " + escolhaComp + "\n\nComputador venceu!");
+            }
+        }
+        else {
+            if(computador == 1) {
+                alert("Jogador: " + escolhaJog + "\nComputador: " + escolhaComp + "\n\nComputador venceu!");
+            }
+            else {
+                alert("Jogador: " + escolhaJog + "\nComputador: " + escolhaComp + "\n\nJogador venceu!");
+            }
+        }
+
+        function Escolha(escolha) {
+            resultado = escolha == 1 ? "Pedra" : escolha == 2 ? "Papel" : "Tesoura";
+            return resultado;
+        }
+
+    </script>
+</head>
+
+<body>
+    
+</body>
+</html>
